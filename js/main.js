@@ -37,49 +37,72 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navigation
 const navigationEl = document.querySelector('.navigation');
 const mainEl = document.querySelector('main');
-/*
-function mainPadding(){
-    if(navigationEl.classList.contains('fold')){
-        //fold 클래스가 붙으면 90px
-        mainEl.style.paddingLeft = '90px'
-    }else{
-        //fold 클래스가 없으면 310px
-         mainEl.style.paddingLeft = '320px'
-    }
-}
-*/
+
 //navigation 호버 시, fold 클래스 추가, 제거 함수 선언
 function mouseEnter() {
     navigationEl.classList.remove('fold');
-    // mainPadding();
 }
 
 function mouseLeave() {
     navigationEl.classList.add('fold');
-    // mainPadding();
-
 }
+
 //navigation 호버 시, fold 클래스 추가, 제거 함수 실행
 navigationEl.addEventListener('mouseenter', mouseEnter);
 navigationEl.addEventListener('mouseleave', mouseLeave);
-// updateMainPadding();
-
-
-
 
 
 
 // navigation 메뉴 클릭 시, active 클래스 컨트롤
-const list = document.querySelectorAll('.list');
+// const list = document.querySelectorAll('.list');
 
-function activeLink() {
-    list.forEach((item) =>
-        item.classList.remove('active'));
-    this.classList.add('active');
-}
+// function activeLink() {
+//     list.forEach((item) =>
+//         item.classList.remove('active'));
+//     this.classList.add('active');
+// }
 
-list.forEach((item) =>
-    item.addEventListener('click', activeLink));
+// list.forEach((item) =>
+//     item.addEventListener('click', activeLink));
+
+document.addEventListener('DOMContentLoaded', () => {
+    const listItems = document.querySelectorAll('.list');
+    const sections = document.querySelectorAll('section');
+    
+    // 섹션과 네비게이션 링크를 연결하기 위한 함수
+    function setActiveLink(activeSection) {
+        listItems.forEach(item => {
+            if (item.dataset.section === activeSection) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setActiveLink(entry.target.id);
+            }
+        });
+    }, { threshold: 0.5 }); // 50% 이상 보일 때 활성화
+
+    // 각 섹션에 대해 observer 관찰 시작
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // 클릭 시 active 클래스 업데이트
+    listItems.forEach(item => {
+        item.addEventListener('click', function() {
+            listItems.forEach(el => el.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
 
 // 반응형 NAV
 const headerEl = document.querySelector('header');
