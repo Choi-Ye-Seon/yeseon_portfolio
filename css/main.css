@@ -1256,6 +1256,13 @@ header {
         'opsz'24
 }
 
+@media (max-width:768px) {
+    #contact .contact p span.material-symbols-outlined {
+        font-size: 26px;
+    }
+
+}
+
 @media (max-width:480px) {
     #contact .contact h3 {
         font-size: 1.25rem;
