@@ -1,44 +1,45 @@
-//Main Title animation
-document.addEventListener('DOMContentLoaded', () => {
-    // .intro 클래스를 가진 div 내의 모든 <p> 태그를 선택합니다
+// 1. [HOME] Title animation
+document.addEventListener('DOMContentLoaded', function () {
     const paragraphs = document.querySelectorAll('.intro p');
 
-    paragraphs.forEach(p => {
-        const textContent = p.innerHTML; // HTML을 가져옵니다
+    paragraphs.forEach(function (p) {
+        const textContent = p.innerHTML; // 'CHOI YE SEON PORTFOLIO' 저장
 
-        // 텍스트를 글자별로 <span>으로 감싸기
-        const wrappedHTML = textContent.split('').map(char => {
-            // 공백과 HTML 엔티티를 그대로 유지하기
+        // 텍스트를 글자별로 쪼갠 후, <span>으로 감싸기
+        const wrappedHTML = textContent.split('').map(function (char) {
+            // 공백도 그대로 출력하지만 <span>으로 감싸지는 않음
             if (char.trim() === '' || char === '&') {
                 return char;
             }
-            return `<span>${char}</span>`;
+            return '<span>' + char + '</span>'; // 공백이 아닌 순수 문자는 <span>으로 감싸기
         }).join('');
 
-        // <p> 태그의 내용을 업데이트합니다
+        // 위 함수 실행에 대한 결과 값(쪼개진 문자열)을 .intro p태그에 다시 저장
         p.innerHTML = wrappedHTML;
 
-        // <p> 태그 내부의 모든 <span> 요소를 선택합니다
+        // 각 글자에 대한 애니메이션 설정
         const spans = p.querySelectorAll('span');
 
-        spans.forEach(span => {
-            // 각 글자에 대해 마우스가 들어올 때
-            span.addEventListener('mouseenter', () => {
-                span.style.color = 'rgba(255, 255, 255, .8)'; // 색상 변경
+        spans.forEach(function (span) {
+            span.addEventListener('mouseenter', function () {
+                span.style.color = 'rgba(255, 255, 255, .8)';
+                // hover 컬러 변경. CSS에서도 변경 필요
             });
 
-            // 각 글자에 대해 마우스가 나갈 때
-            span.addEventListener('mouseleave', () => {
+            span.addEventListener('mouseleave', function () {
                 span.style.color = ''; // 원래 색상으로 되돌리기
             });
         });
     });
 });
-// Navigation
+
+
+// 2. Navigation
+// 2-1. PC - Nav : fold 상태에 따른 CSS 설정을 위해 class 컨트롤
 const navigationEl = document.querySelector('.navigation');
 const mainEl = document.querySelector('main');
 
-//navigation 호버 시, fold 클래스 추가, 제거 함수 선언
+//fold 클래스 컨트롤 함수 선언
 function mouseEnter() {
     navigationEl.classList.remove('fold');
 }
@@ -47,32 +48,20 @@ function mouseLeave() {
     navigationEl.classList.add('fold');
 }
 
-//navigation 호버 시, fold 클래스 추가, 제거 함수 실행
+//fold 클래스 컨트롤 함수 실행
 navigationEl.addEventListener('mouseenter', mouseEnter);
 navigationEl.addEventListener('mouseleave', mouseLeave);
 
 
-
-// navigation 메뉴 클릭 시, active 클래스 컨트롤
-// const list = document.querySelectorAll('.list');
-
-// function activeLink() {
-//     list.forEach((item) =>
-//         item.classList.remove('active'));
-//     this.classList.add('active');
-// }
-
-// list.forEach((item) =>
-//     item.addEventListener('click', activeLink));
-
-document.addEventListener('DOMContentLoaded', () => {
+// 2-2. 섹션 이동 시, Nav 추적
+document.addEventListener('DOMContentLoaded', function () {
     const listItems = document.querySelectorAll('.list');
     const sections = document.querySelectorAll('section');
-    
+
     // 섹션과 네비게이션 링크를 연결하기 위한 함수
     function setActiveLink(activeSection) {
-        listItems.forEach(item => {
-            if (item.dataset.section === activeSection) {
+        listItems.forEach(function (item) {
+            if (item.dataset.section === activeSection) { // list의 data 속성인 data-section 값과 섹션의 ID값을 비교
                 item.classList.add('active');
             } else {
                 item.classList.remove('active');
@@ -80,31 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intersection Observer 설정
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    // Intersection Observer
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-                setActiveLink(entry.target.id);
+                setActiveLink(entry.target.id); // Section이 감지될 때, data-section값과 Section의 ID값을 비교하는 함수 실행
             }
         });
-    }, { threshold: 0.5 }); // 50% 이상 보일 때 활성화
+    }, {
+        threshold: 0.5
+    }); // 50% 이상 보일 때 활성화
 
     // 각 섹션에 대해 observer 관찰 시작
-    sections.forEach(section => {
+    sections.forEach(function (section) {
         observer.observe(section);
     });
 
-    // 클릭 시 active 클래스 업데이트
-    listItems.forEach(item => {
-        item.addEventListener('click', function() {
-            listItems.forEach(el => el.classList.remove('active'));
+    // 2-3. 클릭 시 active 클래스 업데이트
+    listItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            listItems.forEach(function (el) {
+                el.classList.remove('active');
+            });
             this.classList.add('active');
         });
     });
 });
 
 
-// 반응형 NAV
+// 2-4. 반응형 모바일 기기 Navigation
 const headerEl = document.querySelector('header');
 const menuToggle = headerEl.querySelector('header .menu-toggle');
 const slideNav = headerEl.querySelector('header .slide-nav');
@@ -118,18 +111,17 @@ menuToggle.addEventListener('click', function () {
         menuToggle.classList.add('on')
         headerEl.classList.add('menuing');
         document.documentElement.classList.add('fixed');
-
     }
 });
-
+// 2-5. 반응형 모바일 기기 Nav / active 활성화
 const menuEls = slideNav.querySelectorAll('.list');
 
 menuEls.forEach(function (menuEl) {
     menuEl.addEventListener('click', function () {
 
-      menuEls.forEach(function(el){
-        el.classList.remove('active');
-      });
+        menuEls.forEach(function (el) {
+            el.classList.remove('active');
+        });
         menuEl.classList.add('active');
         menuToggle.classList.remove('on');
         headerEl.classList.remove('menuing');
@@ -137,9 +129,9 @@ menuEls.forEach(function (menuEl) {
     });
 });
 
-//반응형 html fiexd 충돌 개선
-window.addEventListener('resize', function(){
-    if(this.window.innerWidth > 1024){
+// 2-6. 반응형 html fiexd 충돌 개선
+window.addEventListener('resize', function () {
+    if (this.window.innerWidth > 1024) {
         menuToggle.classList.remove('on');
         headerEl.classList.remove('menuing');
         document.documentElement.classList.remove('fixed');
@@ -147,32 +139,31 @@ window.addEventListener('resize', function(){
 });
 
 
-//ScrollMagic
+// 3. ScrollMagic
 const spyEls = document.querySelectorAll('.scroll-spy');
 
-spyEls.forEach(function(spyEl){
+spyEls.forEach(function (spyEl) {
 
     let isDraw = false;
 
     const scene = new ScrollMagic
-    .Scene({
-        triggerElement: spyEl,
-        triggerHook : .8
-    })
-    .on('enter', function(){
-        spyEl.classList.add('show');
-        startDraw(spyEl);
-    })
-    .on('leave', function(){
-        spyEl.classList.remove('show');
-    })
-    .addTo(new ScrollMagic.Controller())
+        .Scene({
+            triggerElement: spyEl,
+            triggerHook: .8
+        })
+        .on('enter', function () {
+            spyEl.classList.add('show');
+            startDraw(spyEl);
+        })
+        .on('leave', function () {
+            spyEl.classList.remove('show');
+        })
+        .addTo(new ScrollMagic.Controller())
 });
 
 
 
-
-// About Swiper JS
+// 4. About Swiper JS
 let swiperInstance = new Swiper('#profile .swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -183,7 +174,8 @@ let swiperInstance = new Swiper('#profile .swiper', {
     autoHeight: true
 });
 
-//Skills
+
+// 5. Skills / circle draw 효과 함수 선언
 function startDraw(spyEl) {
     if (spyEl.querySelector('.item.html')) {
         draw(110, '.item.html', '#2D593D');
@@ -206,8 +198,8 @@ function startDraw(spyEl) {
 }
 
 function draw(max, classname, colorname) {
-    var i = 1;
-    var func1 = setInterval(function () {
+    let i = 1; // 시작값
+    let func1 = setInterval(function () {
         if (i < max) {
             color1(i, classname, colorname);
             i++;
@@ -220,12 +212,14 @@ function draw(max, classname, colorname) {
 function color1(i, classname, colorname) {
     $(classname).css({
         "background": "conic-gradient(" + colorname + " 0% " + i + "%, #ffffff " + i + "% 100%)"
+        // colorname 색상 : 시작점(0%)부터 i%까지 적용
+        // #fff 색상 : i% 이후부터 #ffffff (흰색)으로 그라디언트가 변함 (실질적으로는 보이지 않는 색)
     });
 }
 
 
-// Project Swiper JS
-// 1. 개인프로젝트
+//  6. Project Swiper JS
+// 6-1. 개인프로젝트
 const project01 = new Swiper('#project .swiper.project01', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -236,8 +230,7 @@ const project01 = new Swiper('#project .swiper.project01', {
     autoHeight: true
 });
 
-// 2. 상품개발
-// Project Swiper JS
+// 6-2. 상품개발
 const project02 = new Swiper('#project .swiper.project02', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -248,8 +241,7 @@ const project02 = new Swiper('#project .swiper.project02', {
     autoHeight: true
 });
 
-// 3. 맞춤작업
-// Project Swiper JS
+// 6-3. 맞춤작업
 const project03 = new Swiper('#project .swiper.project03', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -261,7 +253,7 @@ const project03 = new Swiper('#project .swiper.project03', {
 });
 
 
-// Fancybox (lightbox) 스크립트
+// 7. Fancybox (lightbox) 스크립트
 document.addEventListener('DOMContentLoaded', function () {
     // Section 1 gallery
     Fancybox.bind('[data-fancybox="gallery1"]', {
@@ -272,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Section 2 gallery
     Fancybox.bind('[data-fancybox="gallery2"]', {
-        infinite: false, // 갤러리 순환 기능 비활성화
+        infinite: true,
         arrows: true,
         buttons: ["zoom", "close"],
     });
@@ -285,37 +277,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// 반응형 작업설명 더보기 
-    const infoViewEls = document.querySelectorAll('#project ul.description button.infoView');
 
+// 8. 반응형 Project 작업설명 더보기 및 swiper Autoheight
+const infoViewEls = document.querySelectorAll('#project ul.description button.infoView');
 
-    infoViewEls.forEach(function(infoView){
-        infoView.addEventListener('click', function(){
+infoViewEls.forEach(function (infoView) {
+    infoView.addEventListener('click', function () {
 
-            const arrowEl = this.querySelector('i');
-            const viewmoreEls = this.closest('#project .swiper-slide').querySelectorAll('ul.description li.viewmore');
+        // 8-1. 작업설명 더보기 
+        const arrowEl = this.querySelector('i');
+        const viewmoreEls = this.closest('#project .swiper-slide').querySelectorAll('ul.description li.viewmore');
 
-            arrowEl.classList.toggle('view');
-    
-            viewmoreEls.forEach(function(viewmoreEl){
-                viewmoreEl.classList.toggle('view');
-            });
-    
-            const swiperEl = this.closest('#project .swiper');
-            if(swiperEl.classList.contains('project01')){
-                project01.updateAutoHeight();
-            }else if(swiperEl.classList.contains('project02')){
-                project02.updateAutoHeight();
-            } else if(swiperEl.classList.contains('project03')){
-                project03.updateAutoHeight();
-            }
-    
+        arrowEl.classList.toggle('view');
+
+        viewmoreEls.forEach(function (viewmoreEl) {
+            viewmoreEl.classList.toggle('view');
         });
 
+        // 8-2. Swiper Autoheight
+        const swiperEl = this.closest('#project .swiper');
+        if (swiperEl.classList.contains('project01')) {
+            project01.updateAutoHeight();
+        } else if (swiperEl.classList.contains('project02')) {
+            project02.updateAutoHeight();
+        } else if (swiperEl.classList.contains('project03')) {
+            project03.updateAutoHeight();
+        }
     });
-  
+});
+
 
 // Footer this-year
 const yearEl = document.querySelector('footer #this-year');
-
 yearEl.textContent = new Date().getFullYear();

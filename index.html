@@ -2,74 +2,93 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>최예선_퍼블리셔 포트폴리오</title>
-
-    <!-- 메타태그 -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="퍼블리셔 최예선 포트폴리오">
     <meta property="og:title" content="퍼블리셔 최예선 포트폴리오">
     <meta property="og:description" content="안녕하세요! 니즈와 만족을 이어주는 퍼블리셔 최예선입니다:D">
     <meta property="og:image" content="./images/ogimg.png">
-    <!-- //메타태그 -->
+    <title>최예선_퍼블리셔 포트폴리오</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
     <!-- //Favicon -->
 
+
     <!-- Reset CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <!-- //Reset CSS -->
+
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- // Swiper JS -->
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- //Main CSS -->
 
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- jQuery -->
+    <!-- //jQuery CDN -->
+
+
+    <!-- Main jQuery -->
     <script src="./js/query.js"></script>
-    <!-- Google Icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- // Main jQuery -->
 
-    <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./css/main.css">
 
     <!-- Main JS -->
     <script defer src="./js/main.js"></script>
+    <!-- // Main JS -->
 
-    <!-- Fancybox css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-    <!-- Lodash JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google Icon / Font Awesome -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- // Google Icon / Font Awesome-->
+
+
+    <!-- Fancybox 라이브러리 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- Fancybox 라이브러리 -->
+
+
+    <!-- Navigation 라이브러리 -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <!-- // Navigation 라이브러리 -->
+
 
     <!-- ScrollMagic JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
         integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
+    <!-- // ScrollMagic JS -->
 </head>
 
 <body>
-    <!-- PC - NAV -->
+    <!-- PC(~1024px) - NAV -->
     <nav>
         <div class="navigation fold">
-            <h1 class="logo">
-                <a href="./index.html">
+            <!-- LOGO -->
+            <a href="./index.html" class="logo">
+                <h1>
                     <strong>Yeseon</strong>
                     <br>Web Portfolio
-                </a>
-            </h1>
+                </h1>
+            </a>
+            <!-- // LOGO -->
+            <!-- MENU -->
             <ul>
                 <li class="list active" data-section="home">
                     <a href="index.html#home">
@@ -101,25 +120,31 @@
                         <span class="title">Github</span>
                     </a>
                 </li>
-
             </ul>
+            <!-- // MENU -->
+
         </div>
     </nav>
-    <!-- //PC - NAV -->
+    <!-- // PC - NAV -->
 
-    <!-- 반응형 HEADER -->
+    <!-- 반응형(1024px~) HEADER -->
     <header>
         <div class="inner">
-            <h1 class="logo">
+            <!-- LOGO -->
+            <div class="logo">
                 <a href="./index.html"><strong>Yeseon</strong><br>Web Portfolio</a>
-            </h1>
+            </div>
+            <!-- // LOGO -->
 
-            <!-- 모바일 메뉴 -->
+
+            <!-- MENU / Toggle Btn -->
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
             </div>
+            <!-- // MENU / Toggle Btn -->
 
+            <!-- MENU / SLIDE NAV-->
             <div class="slide-nav">
                 <ul>
                     <li class="list active" data-section="home">
@@ -152,21 +177,21 @@
                             <span class="title">Github</span>
                         </a>
                     </li>
-
                 </ul>
+                <!-- // MENU / SLIDE NAV-->
             </div>
         </div>
     </header>
+    <!-- // 반응형(1024px~) HEADER -->
 
 
-    <!-- HEADER -->
-
-    <!-- CONTENTS WRAP -->
+    <!-- CONTENTS MAIN -->
     <main>
         <!-- HOME -->
         <section id="home">
             <div class="inner">
                 <div class="intro">
+                    <h2 class="hidden">hidden</h2>
                     <p>CHOI YE SEON</p>
                     <p>PORTFOLIO</p>
                 </div>
@@ -175,185 +200,113 @@
         <!-- HOME -->
 
 
-        <!-- Profile-->
+        <!-- PROFILE -->
         <section id="profile">
             <div class="inner">
-                <div class="main-title">
-                    Profile
-                </div>
+                <div class="main-title">Profile</div>
+
                 <div class="scroll-spy">
-                <!-- Profile / 프로필 카드 + 작업물 카드 -->
-                <div class="container">
-                    <div class="profile-card">
-                        <div class="itemBox">
-                            <div class="imgBox"></div>
-                            <div class="textBox">
-                                안녕하세요!
-                                <br>니즈와 만족을 이어주는 퍼블리셔 <strong>최예선</strong>입니다:D
+                    <!-- PROFILE / 프로필 카드 + 작업물 카드 -->
+                    <div class="container">
+                        <div class="profile-card">
+                            <div class="itemBox">
+                                <div class="imgBox"></div>
+                                <div class="textBox">
+                                    안녕하세요!
+                                    <br>니즈와 만족을 이어주는 퍼블리셔 <strong>최예선</strong>입니다:D
+                                </div>
+                            </div>
+                            <div class="btnBox">
+                                <a href="https://www.rallit.com/resumes/1374909@choii_ii/%EC%B5%9C%EC%98%88%EC%84%A0?theme=STANDARD"
+                                    target="_blank">Profile View</a>
                             </div>
                         </div>
-                        <div class="btnBox">
-                            <a href="https://www.rallit.com/resumes/1374909@choii_ii/%EC%B5%9C%EC%98%88%EC%84%A0?theme=STANDARD"
-                                target="_blank">Profile View</a>
+                        <div class="workspace">
+                            <!-- 프로젝트 현황 -->
+                            <div class="card">
+                                <div class="card__info">
+                                    <div class="title"><i class="fa fa-folder-open" style="font-size:22px"></i> Project
+                                    </div>
+                                    <div class="description">
+                                        <p class="period">2022 - 2024</p>
+                                        <p class="count">15개의 프로젝트</p>
+                                    </div>
+                                </div>
+                                <a href="./index.html#project">View more<i class="fa fa-angle-right"
+                                        style="font-size:18px; margin-left: 10px;"></i></a>
+                            </div>
+                            <!-- //프로젝트 현황 -->
+
+                            <!-- 깃허브 저장소 현황 -->
+                            <div class="card">
+                                <div class="card__info">
+                                    <div class="title"><i class="fa fa-github" style="font-size:24px"></i> Github
+                                    </div>
+                                    <div class="description">
+                                        <p class="period">개인 프로젝트</p>
+                                        <p class="count">4개의 저장물</p>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/Choi-Ye-Seon" target="_blank">View more<i
+                                        class="fa fa-angle-right" style="font-size:18px; margin-left: 10px;"></i></a>
+                            </div>
+                            <!-- //깃허브 저장소 현황 -->
                         </div>
                     </div>
-                    <div class="workspace">
-                        <!-- 프로젝트 현황 -->
-                        <div class="card">
-                            <div class="card__info">
-                                <div class="title"><i class="fa fa-folder-open" style="font-size:22px"></i> Project
-                                </div>
-                                <div class="description">
-                                    <p class="period">2022 - 2024</p>
-                                    <p class="count">15개의 프로젝트</p>
-                                </div>
-                            </div>
-                            <a href="./index.html#project">View more<i class="fa fa-angle-right"
-                                    style="font-size:18px; margin-left: 10px;"></i></a>
+                    <!-- // PROFILE / 프로필 카드 + 작업물 카드 -->
+
+                    <!-- PROFILE / About -->
+                    <div class="container about ">
+                        <div class="sub-title">About</div>
+                        <div class="comment">
+                            <span style="font-size: 1.7647rem;">&#127803;</span>
+                            노력의 결과물이 완성될 때 느끼는 성취감과 만족에서 오는 행복감을 얻으며 웹 개발 일을 하고 있습니다.
                         </div>
-                        <!-- //프로젝트 현황 -->
-                        <!-- 깃허브 저장소 현황 -->
-                        <div class="card">
-                            <div class="card__info">
-                                <div class="title"><i class="fa fa-github" style="font-size:24px"></i> Github
-                                </div>
-                                <div class="description">
-                                    <p class="period">개인 프로젝트</p>
-                                    <p class="count">4개의 저장물</p>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Choi-Ye-Seon" target="_blank">View more<i
-                                    class="fa fa-angle-right" style="font-size:18px; margin-left: 10px;"></i></a>
-                        </div>
-                        <!-- //깃허브 저장소 현황 -->
-                    </div>
-                </div>
-                <!-- //프로필 카드 + 작업물 카드 -->
-                <!-- Profile / About -->
-                <div class="container about ">
-                    <div class="sub-title">About</div>
-                    <div class="comment"><span style="font-size: 1.7647rem;">&#127803;</span>노력의 결과물이 완성될 때 느끼는 성취감과
-                        만족에서
-                        오는 행복감을 얻으며 웹 개발 일을 하고 있습니다.</div>
-                    <!-- 1200px - 640px -->
-                    <ul class="pc-view">
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="fa fa-code"></i>
-                            </div>
-                            <h2>WEB PUBLISHER</h2>
-                            <p class="description">
-                                차별 없는 웹 공간을 만들기 위해 웹 표준과 접근성을 고려한 탄탄한 마크업을 지향하며, 프로젝트를 다각도로 분석하여 사용자의 니즈를 정교하게
-                                파악합니다.</p>
-                        </li>
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <h2>RESPONSIVE</h2>
-                            <p class="description">
-                                미디어쿼리를 활용해 다양한 기기에서도 유연하게 작동하는 반응형 웹을 구현하여 사용자에게 일관된 경험을 제공하고, SEO에도 유리한 웹 사이트를 제작할
-                                수 있습니다.
-                            </p>
-                        </li>
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="fa fa-code-fork"></i>
-                            </div>
-                            <h2>DEVELOPER</h2>
-                            <p class="description">
-                                jQuery, Javascript를 이해하고 직접 작성하여 다양한 기능을 구현할 수 있습니다.
-                                <br>또한 여러 라이브러리를 적절히 활용하여 웹 개발의 기능성을 극대화 할 수 있습니다.
-                            </p>
-                        </li>
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="material-icons">extension</i>
-                            </div>
-                            <h2>SKILLS</h2>
-                            <p class="description">
-                                현재의 기술에 안주하지 않고, 멀리 도약하고자 SCSS, React, Typescript, Figma를 학습하고있습니다.
-                                <br>이를 통해 깊이 있는 기술 지식과 기술 트렌드를 익혀 더 나은 웹 개발 역량을 갖추고 있습니다.
-                            </p>
-                        </li>
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="material-icons">history</i>
-                            </div>
-                            <h2>EXPERIENCE</h2>
-                            <p class="description">
-                                웹 에이전시 재직 중, 고객의 니즈를 정교하게 분석하여 사용자 중심의 경험을 제공했습니다.
-                                <br>또한, 다양한 상황을 예측하고 꼼꼼하게 진행한 배포 테스트를 통해 문제 해결 능력을 강화했습니다.
-                            </p>
-                        </li>
-                        <li class="itemBox">
-                            <div class="icon">
-                                <i class="material-icons">group</i>
-                            </div>
-                            <h2>COOPERATION</h2>
-                            <p class="description">
-                                다양한 분야의 실무진과 원활하게 소통하며 프로젝트를 성공적으로 진행할 수 있을 뿐만 아니라, 다른 분야에 대한 이해와 협력을 통해 더 나은 결과물을
-                                만들어내고자 합니다.
-                            </p>
-                        </li>
-                    </ul>
-                    <!-- //1200px - 640px -->
-                    <!-- 640px ~ -->
-                    <div class="swiper">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
+
+                        <!-- 반응형 ~ 640px -->
+                        <ul class="pc-view">
+                            <li class="itemBox">
+                                <div class="icon"><i class="fa fa-code"></i></div>
                                 <h2>WEB PUBLISHER</h2>
                                 <p class="description">
                                     차별 없는 웹 공간을 만들기 위해 웹 표준과 접근성을 고려한 탄탄한 마크업을 지향하며, 프로젝트를 다각도로 분석하여 사용자의 니즈를 정교하게
-                                    파악합니다.</p>
+                                    파악합니다.
+                                </p>
                             </li>
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="fa fa-laptop"></i>
-                                </div>
+                            <li class="itemBox">
+                                <div class="icon"><i class="fa fa-laptop"></i></div>
                                 <h2>RESPONSIVE</h2>
                                 <p class="description">
                                     미디어쿼리를 활용해 다양한 기기에서도 유연하게 작동하는 반응형 웹을 구현하여 사용자에게 일관된 경험을 제공하고, SEO에도 유리한 웹 사이트를 제작할
                                     수 있습니다.
                                 </p>
                             </li>
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="fa fa-code-fork"></i>
-                                </div>
+                            <li class="itemBox">
+                                <div class="icon"><i class="fa fa-code-fork"></i></div>
                                 <h2>DEVELOPER</h2>
                                 <p class="description">
                                     jQuery, Javascript를 이해하고 직접 작성하여 다양한 기능을 구현할 수 있습니다.
                                     <br>또한 여러 라이브러리를 적절히 활용하여 웹 개발의 기능성을 극대화 할 수 있습니다.
                                 </p>
                             </li>
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="material-icons">extension</i>
-                                </div>
+                            <li class="itemBox">
+                                <div class="icon"><i class="material-icons">extension</i></div>
                                 <h2>SKILLS</h2>
                                 <p class="description">
                                     현재의 기술에 안주하지 않고, 멀리 도약하고자 SCSS, React, Typescript, Figma를 학습하고있습니다.
                                     <br>이를 통해 깊이 있는 기술 지식과 기술 트렌드를 익혀 더 나은 웹 개발 역량을 갖추고 있습니다.
                                 </p>
                             </li>
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="material-icons">history</i>
-                                </div>
+                            <li class="itemBox">
+                                <div class="icon"><i class="material-icons">history</i></div>
                                 <h2>EXPERIENCE</h2>
                                 <p class="description">
                                     웹 에이전시 재직 중, 고객의 니즈를 정교하게 분석하여 사용자 중심의 경험을 제공했습니다.
                                     <br>또한, 다양한 상황을 예측하고 꼼꼼하게 진행한 배포 테스트를 통해 문제 해결 능력을 강화했습니다.
                                 </p>
                             </li>
-                            <li class="swiper-slide itemBox">
-                                <div class="icon">
-                                    <i class="material-icons">group</i>
-                                </div>
+                            <li class="itemBox">
+                                <div class="icon"><i class="material-icons">group</i></div>
                                 <h2>COOPERATION</h2>
                                 <p class="description">
                                     다양한 분야의 실무진과 원활하게 소통하며 프로젝트를 성공적으로 진행할 수 있을 뿐만 아니라, 다른 분야에 대한 이해와 협력을 통해 더 나은 결과물을
@@ -361,13 +314,70 @@
                                 </p>
                             </li>
                         </ul>
-                        <div class="swiper-pagination"></div>
+                        <!-- // 반응형 ~ 640px -->
+
+                        <!-- 반응형 640px ~ -->
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="fa fa-code"></i></div>
+                                    <h2>WEB PUBLISHER</h2>
+                                    <p class="description">
+                                        차별 없는 웹 공간을 만들기 위해 웹 표준과 접근성을 고려한 탄탄한 마크업을 지향하며, 프로젝트를 다각도로 분석하여 사용자의 니즈를 정교하게
+                                        파악합니다.
+                                    </p>
+                                </li>
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="fa fa-laptop"></i></div>
+                                    <h2>RESPONSIVE</h2>
+                                    <p class="description">
+                                        미디어쿼리를 활용해 다양한 기기에서도 유연하게 작동하는 반응형 웹을 구현하여 사용자에게 일관된 경험을 제공하고, SEO에도 유리한 웹 사이트를
+                                        제작할
+                                        수 있습니다.
+                                    </p>
+                                </li>
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="fa fa-code-fork"></i></div>
+                                    <h2>DEVELOPER</h2>
+                                    <p class="description">
+                                        jQuery, Javascript를 이해하고 직접 작성하여 다양한 기능을 구현할 수 있습니다.
+                                        <br>또한 여러 라이브러리를 적절히 활용하여 웹 개발의 기능성을 극대화 할 수 있습니다.
+                                    </p>
+                                </li>
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="material-icons">extension</i></div>
+                                    <h2>SKILLS</h2>
+                                    <p class="description">
+                                        현재의 기술에 안주하지 않고, 멀리 도약하고자 SCSS, React, Typescript, Figma를 학습하고있습니다.
+                                        <br>이를 통해 깊이 있는 기술 지식과 기술 트렌드를 익혀 더 나은 웹 개발 역량을 갖추고 있습니다.
+                                    </p>
+                                </li>
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="material-icons">history</i></div>
+                                    <h2>EXPERIENCE</h2>
+                                    <p class="description">
+                                        웹 에이전시 재직 중, 고객의 니즈를 정교하게 분석하여 사용자 중심의 경험을 제공했습니다.
+                                        <br>또한, 다양한 상황을 예측하고 꼼꼼하게 진행한 배포 테스트를 통해 문제 해결 능력을 강화했습니다.
+                                    </p>
+                                </li>
+                                <li class="swiper-slide itemBox">
+                                    <div class="icon"><i class="material-icons">group</i></div>
+                                    <h2>COOPERATION</h2>
+                                    <p class="description">
+                                        다양한 분야의 실무진과 원활하게 소통하며 프로젝트를 성공적으로 진행할 수 있을 뿐만 아니라, 다른 분야에 대한 이해와 협력을 통해 더 나은
+                                        결과물을
+                                        만들어내고자 합니다.
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- // 반응형 640px ~ -->
                     </div>
-                    <!-- //640px ~ -->
+                    <!-- // PROFILE / ABOUT -->
                 </div>
-                <!-- // Profile / ABOUT -->
-            </div>
-                <!-- Profile / SKILLS -->
+
+                <!-- PROFILE / SKILLS -->
                 <div class="container skills scroll-spy">
                     <div class="sub-title">Skills</div>
                     <div class="wrap">
@@ -379,41 +389,49 @@
                         <div class="item photoshop"><span class="center">Abobe<br>Photoshop</span></div>
                     </div>
                 </div>
-                <!-- // Profile / SKILLS -->
+                <!-- // PROFILE / SKILLS -->
             </div>
         </section>
-        <!-- //Profile-->
+        <!-- // PROFILE-->
 
-        <!-- Project -->
+
+        <!-- PROJECT -->
         <section id="project" class="scroll-spy">
             <div class="inner">
                 <div class="main-title">Project</div>
+                <!-- PROJECT / Tab-menu -->
                 <ul>
                     <li class="tab-menu on">개인프로젝트</li>
                     <li class="tab-menu">상품개발</li>
                     <li class="tab-menu">맞춤작업</li>
                 </ul>
-                <!-- 개인프로젝트 -->
+                <!-- // PROJECT / Tab-menu -->
+
+                <!-- PROJECT / 개인프로젝트 -->
                 <div class="swiper project01 tab-con view">
                     <div class="swiper-wrapper">
                         <!-- 01. 법률사무소 리그 -->
-                        <div class="swiper-slide ">
+                        <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">01</span>
                                     <div class="name">
                                         <p>법률사무소 리그 전체 리뉴얼</p>
                                         <p class="type">반응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://lawfirm-league.vercel.app/" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
-                                <a data-fancybox="gallery1" href="./images/league_preview.png" class="thumbBox">
+                                <!-- Thumbnail -->
+                                <a href="./images/league_preview.png" class="thumbBox" data-fancybox="gallery1"
+                                    data-caption="법률사무소 리그">
                                     <img src="./images/league.png" alt="법률사무소 리그" class="lightbox">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -449,14 +467,13 @@
                                                     <li>
                                                         <h3>콘텐츠 최적화</h3>
                                                         <p>최대한 직관적이고 가독성이 향상된 메인 공간으로 전환시키기 위해 중요도가 낮은 콘텐츠는 과감히 제거하거나
-                                                            Swiper JS를
-                                                            통해 공간 사용을 최소화 하였으며, 중복되는 콘텐츠는 맵핑 작업을 통해 노출을 간소화하였습니다.</p>
+                                                            Swiper JS를 통해 공간 사용을 최소화 하였으며, 중복되는 콘텐츠는 맵핑 작업을 통해 노출을
+                                                            간소화하였습니다.</p>
                                                     </li>
                                                     <li>
                                                         <h3>고객 편의성 증대</h3>
                                                         <p>방문 상담 고객을 위해 카카오 맵 API를 연동하여 지도 서비스를 제공하였으며, 상담 신청 영역을 직관적으로
-                                                            구현하여 메인
-                                                            공간에서 이탈 없이 서비스 정보를 이용할 수 있도록 편의성을 증대하였습니다.</p>
+                                                            구현하여 메인 공간에서 이탈 없이 서비스 정보를 이용할 수 있도록 편의성을 증대하였습니다.</p>
                                                     </li>
                                                     <li>
                                                         <h3>라이브러리 활용</h3>
@@ -469,29 +486,33 @@
                                     </li>
 
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //01. 법률사무소 리그 -->
+
                         <!-- 02. BOS 솔루션 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">02</span>
                                     <div class="name">
                                         <p>BOS 솔루션 메인 리뉴얼</p>
                                         <p class="type">반응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://bos-pi.vercel.app/" class="btn__more" target="_blank">View more<i
                                         class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/bos_preview.png" class="thumbBox" data-fancybox="gallery1"
-                                    data-caption="법률사무소 리그">
+                                    data-caption="BOS 솔루션">
                                     <img src="./images/bos.png" alt="BOS 솔루션">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -547,28 +568,33 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- Project Info -->
                             </div>
                         </div>
                         <!-- //02. BOS 솔루션 -->
+
                         <!-- 03. B.utcher -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">03</span>
                                     <div class="name">
                                         <p>B.utcher (정육 프랜차이즈) 메인 페이지</p>
                                         <p class="type">반응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://butcher-sigma.vercel.app/" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/butcher_preview.png" class="thumbBox" data-fancybox="gallery1"
                                     data-caption="정육 프랜차이즈 B.utcher">
                                     <img src="./images/butcher.png" alt="정육 프랜차이즈 B.utcher">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -619,6 +645,7 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //03. B.utcher -->
@@ -633,23 +660,26 @@
                         <!-- 01. 모바일 청첩장 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">01</span>
                                     <div class="name">
                                         <p>모바일 청첩장</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://wedding.bbiz.kr/kwa-com_bos_wedding_letter_v-2?ts=135559"
                                     class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/wedding_preview.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="모바일 청첩장">
                                     <img src="./images/wedding.png" alt="모바일 청첩장">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -701,30 +731,34 @@
                                     </li>
 
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //01. 모바일 청첩장 -->
+
                         <!-- 02. 모바일 초대장 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">02</span>
                                     <div class="name">
                                         <p>모바일 초대장</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://invitation.bbiz.kr/kwa-com_bos_invitation_card_v-1?ts=135922&SCH_open_date_1=2033-12-01&SCH_close_date_1=2033-12-31"
                                     class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/invite_preview02.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="모바일 초대장">
                                     <img src="./images/invitation.png" alt="모바일 초대장">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -775,30 +809,34 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //02. 모바일 초대장 -->
+
                         <!-- 03. 모바일 부고장 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">03</span>
                                     <div class="name">
                                         <p>모바일 부고장</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://obituary01.bbiz.kr/kwa-com_bos_obituary_notice_v-96?ts=123442"
                                     class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
-
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/bugo_preview.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="모바일 부고장">
                                     <img src="./images/bugo.png" alt="모바일 부고장 ">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -844,29 +882,33 @@
                                     </li>
 
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //03. 모바일 부고장 -->
+
                         <!-- 04. 병원홈페이지12 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">04</span>
                                     <div class="name">
                                         <p>병원홈페이지12 서브페이지 개발 </p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="http://hospital12.bbiz.kr" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/hospital12_preview.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="병원홈페이지12">
                                     <img src="./images/hospital12.png" alt="병원홈페이지12">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -914,29 +956,33 @@
                                         </ul>
                                     </li>
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //04. 병원홈페이지12 -->
+
                         <!-- 05. 관공서홈페이지09 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">05</span>
                                     <div class="name">
                                         <p>관공서홈페이지09 상품 개발</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="http://office09.bbiz.kr/" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/office09_preview.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="관공서홈페이지09">
                                     <img src="./images/office09.png" alt="관공서홈페이지09 ">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -984,29 +1030,33 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //05. 관공서홈페이지09 -->
-                        <!-- 06. 분양홈페이지10 추가하기 -->
+
+                        <!-- 06. 분양홈페이지10 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">06</span>
                                     <div class="name">
                                         <p>분양홈페이지10 서브페이지 개발</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="http://realestate10.bbiz.kr" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
-
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/estate10_preview.png" class="thumbBox" data-fancybox="gallery2"
                                     data-caption="분양홈페이지10">
                                     <img src="./images/estate10.png" alt="분양홈페이지10 ">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -1037,7 +1087,7 @@
                                     </li>
 
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //06. 분양홈페이지10 -->
@@ -1052,18 +1102,19 @@
                         <!-- 01. 모바일 카드 플러그인 쓰기폼 제작 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">01</span>
                                     <div class="name">
                                         <p>모바일 카드 플러그인 쓰기폼 제작</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://invitation.bbiz.kr/kwa-com_bos_invitation_card_w" class="btn__more"
                                     target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <div id="slide">
                                     <a href="./images/wedding_w.png" class="thumbBox" data-fancybox="gallery3"
                                         data-caption="모바일 청첩장 쓰기폼">
@@ -1081,6 +1132,8 @@
                                         <div class="overlay">프로젝트 미리보기</div>
                                     </a>
                                 </div>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -1130,29 +1183,33 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- // 01. 모바일 카드 플러그인 쓰기폼 제작 -->
+
                         <!-- 02. 엉클샘 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">02</span>
                                     <div class="name">
                                         <p>UNCLESAM (엉클샘)</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://us114.net/kwa-people" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
-
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/unclesam.png" class="thumbBox" data-fancybox="gallery3"
                                     data-caption="엉클샘">
                                     <img src="./images/unclesam.png" alt="엉클샘">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -1198,31 +1255,34 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                 </ul>
-
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //02. 엉클샘 -->
+
                         <!-- 03. 남도장터 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">03</span>
                                     <div class="name">
                                         <p>남도장터</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://jnmall.kr/kwa-578950" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/namdomarket.png" class="thumbBox" data-fancybox="gallery3"
                                     data-caption="남도장터">
                                     <img src="./images/namdomarket.png" alt="남도장터">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -1251,29 +1311,33 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //03. 남도장터 -->
+
                         <!-- 04. 제주다움 -->
                         <div class="swiper-slide">
                             <div class="project-header">
-                                <h2 class="project__name">
+                                <div class="project__name">
                                     <span class="num">04</span>
                                     <div class="name">
                                         <p>제주다움</p>
                                         <p class="type">적응형 홈페이지 [PC, M]</p>
                                     </div>
-                                </h2>
+                                </div>
                                 <a href="https://jnmall.kr/kwa-578950" class="btn__more" target="_blank">View
                                     more<i class="fa fa-angle-right" style="font-size:20px; margin-left: 10px;"></i></a>
                             </div>
-
                             <div class="content">
+                                <!-- Thumbnail -->
                                 <a href="./images/jejudaum.png" class="thumbBox" data-fancybox="gallery3"
                                     data-caption="제주다움">
                                     <img src="./images/jejudaum.png" alt="제주다움">
                                     <div class="overlay">프로젝트 미리보기</div>
                                 </a>
+                                <!-- // Thumbnail -->
+                                <!-- Project Info -->
                                 <ul class="infoBox">
                                     <li>
                                         <div class="label">기여도</div>
@@ -1308,6 +1372,7 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <!-- // Project Info -->
                             </div>
                         </div>
                         <!-- //04. 제주다움 -->
@@ -1320,14 +1385,13 @@
         <!-- Project -->
 
 
-        <!-- Contact -->
+        <!-- CONTACT -->
         <section id="contact" class="scroll-spy">
             <div class="inner">
                 <div class="main-title">Contact</div>
                 <div class="container">
                     <div class="comment">
-                        <strong>누구에게나 만족할 수 있는 사용자 경험을 디자인하고, 변화하는 개발 트렌드에 맞춰 새로운 방식을 도입하고 시도하는 것을
-                            중요시합니다.</strong>
+                        <strong>누구에게나 만족할 수 있는 사용자 경험을 디자인하고, 변화하는 개발 트렌드에 맞춰 새로운 방식을 도입하고 시도하는 것을 중요시합니다.</strong>
                         <br>현재 SCSS와 Javascript를 깊게 탐구하고 있으며, 나아가 React와 Typescript 기술에도 관심을 가지고 학습 중입니다.
                         <br>이를 통해 최신 기술들을 활용하여 혁신적이고 효율적인 웹사이트 구축을 목표로 하고 있습니다.
                         <br>
@@ -1342,7 +1406,6 @@
                         <h3>LET'S WORK TOGETHER!</h3>
                         <p><span>E.</span>choii_ii@naver.com</p>
                         <p><a href="https://blog.naver.com/choii__ii" target="_blank"><span>B.</span>초이의 개발노트:D</a></p>
-
                     </div>
                 </div>
 
@@ -1354,25 +1417,8 @@
                 <!-- //FOOTER -->
             </div>
         </section>
+        <!-- CONTACT -->
     </main>
-
-
-
-
-
-    <!-- navigation script -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="script.js"></script>
-
-
-    <!-- 라이트박스 스크립트 로드 -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script> -->
-
-    <!-- Fancybox cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-
 </body>
 
 </html>
