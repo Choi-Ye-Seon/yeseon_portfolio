@@ -138,6 +138,7 @@ section {
 
 .sub-title {
     font-size: 1.5294rem;
+    line-height: 1.2;
     font-weight: 600;
     letter-spacing: -0.5px;
     padding-bottom: 1em;
@@ -553,21 +554,15 @@ header {
     gap: 12px;
     color: var(--font-white);
     font-size: 1.1765rem;
-    padding-bottom: 1.5em;
+    padding-bottom: 1em;
 }
 
-#profile .card .description .period {
+#profile .card .description {
     font-size: 15px;
     color: rgba(255, 255, 255, .6);
     letter-spacing: -0.5px;
-    padding-bottom: 8px;
 }
 
-#profile .card .count {
-    font-size: clamp(16px, 2vw, 24px);
-    font-weight: 500;
-    line-height: 1.3;
-}
 
 #profile .card a {
     color: var(--font-white);
@@ -577,13 +572,7 @@ header {
     justify-content: end;
 }
 
-#profile .card .count strong {
-    font-weight: 600;
-}
 
-#profile .card .count span {
-    font-size: 26px;
-}
 
 @media (max-width: 1024px) {
     #profile .container {
@@ -605,12 +594,9 @@ header {
     }
 
     #profile .card .description {
-        padding-bottom: 1.7647em;
+        display: none;
     }
 
-    #profile .card .count {
-        font-size: 1.2941rem;
-    }
 }
 
 @media (max-width:480px) {
@@ -712,6 +698,10 @@ header {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
+
+
+
+
 }
 
 @media (max-width:768px) {
@@ -733,7 +723,10 @@ header {
         display: flex;
         padding-bottom: 47px;
         grid-gap: 0;
+
     }
+
+
 
     #profile .container.about .description br {
         display: none;
@@ -791,7 +784,7 @@ header {
     aspect-ratio: 1;
     border-radius: 50%;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: 500;
     transform: translate(-50%, -50%);
 }
@@ -805,6 +798,10 @@ header {
     #profile .container.skills .wrap .item span.center {
         font-size: 1rem;
     }
+
+    #profile .container.about .comment {
+        padding: 14px 20px;
+    }
 }
 
 @media (max-width:640px) {
@@ -817,6 +814,12 @@ header {
     #profile .container.skills .wrap {
         grid-gap: 16px;
     }
+
+    #profile .container.about .comment {
+        padding-top: 10px;
+        padding-bottom: 16px;
+    }
+
 }
 
 /* // PROFILE / Skills */
@@ -834,6 +837,7 @@ header {
 #project li.tab-menu {
     padding: 10px 24px;
     border: 1px solid var(--point-color);
+    background-color: #f5f5f5;
     font-weight: 500;
     border-radius: 100px;
     cursor: pointer;
@@ -1193,81 +1197,118 @@ header {
     border-radius: 10px;
 }
 
-#contact .comment {
+/* Contact / What My Team Says! */
+#contact .container.says {
+    margin-bottom: 30px;
+}
+
+#contact .container.says .swiper {
+    padding-bottom: 47px;
+}
+
+#contact .container.says .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: stretch;
+}
+
+#contact .container.says .swiper-slide {
+    width: 360px;
+    border: 1px solid var(--button01);
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+#contact .container.says .swiper-slide:last-child {
+    margin-right: 0 !important;
+}
+
+#contact .container.says .swiper-slide:hover {
+    background-color: var(--point-color);
+    color: var(--font-white);
+}
+
+#contact .container.says .swiper-slide svg {
+    margin-bottom: 15px;
+}
+
+#contact .container.says .swiper-slide svg path {
+    fill: var(--point-color);
+}
+
+#contact .container.says .swiper-slide:hover svg path {
+    fill: var(--main-color);
+}
+
+
+#contact .container.says .swiper-slide .description {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+#contact .container.says .swiper-slide .sign {
+    font-size: 15px;
+    line-height: 1.4;
+    color: rgba(51, 51, 51, .6);
+}
+
+#contact .container.says .swiper-slide:hover .sign {
+    color: rgba(255, 255, 255, .8);
+}
+
+/* // Contact / What My Team Says! */
+
+/*  Contact / Closure */
+#contact .container.closure .comment {
     font-size: 1rem;
     line-height: 1.5;
     word-break: keep-all;
     padding-bottom: 1.7647em;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
 }
 
-#contact .comment strong {
+#contact .container.closure .comment span.heighlight {
     font-weight: 500;
-    position: relative;
-    display: inline-block;
-    z-index: 1;
 }
 
-#contact .comment strong::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--button01);
-    transition: width .3s;
-    z-index: -1;
+#contact .container.closure .comment:hover span.heighlight {
+    background: linear-gradient(to top, var(--main-color) 40%, transparent 60%);
 }
 
-#contact .comment:hover strong::before {
-    width: 100%;
-}
-
-#contact .contact {
+#contact .container.closure .contact {
     padding-top: 1.7647em;
     border-top: 1px solid rgba(112, 112, 112, .2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 60px;
 }
 
-#contact .contact h3 {
-    font-size: 1.5294rem;
-    font-weight: 600;
-    padding-bottom: 10px;
-    line-height: 1.2;
-    color: var(--font-light);
-}
 
-#contact .contact p {
+#contact .container.closure .contact a {
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--font-main);
     line-height: 1.3;
+    transition: .2s;
+}
+
+#contact .container.closure .contact a i {
+    font-size: 1.1765rem;
 }
 
 
-#contact .contact p span.material-symbols-outlined {
-    font-size: 28px;
-    margin-bottom: -2px;
-    font-variation-settings:
-        'FILL'0,
-        'wght'300,
-        'GRAD'-25,
-        'opsz'24
+#contact .container.closure .contact a:hover {
+    color: var(--point-color);
 }
 
-@media (max-width:768px) {
-    #contact .contact p span.material-symbols-outlined {
-        font-size: 26px;
-    }
-
-}
-
-@media (max-width:480px) {
-    #contact .contact h3 {
-        font-size: 1.25rem;
-    }
-}
+/*  //Contact / Closure */
 
 /* // Contact */
 

@@ -295,6 +295,7 @@ infoViewEls.forEach(function (infoView) {
         });
 
         // 8-2. Swiper Autoheight
+        // updateAutoHeight() : Swiper.js에서 사용하는 메소드로, 슬라이더의 높이를 동적으로 업데이트하는 데 사용
         const swiperEl = this.closest('#project .swiper');
         if (swiperEl.classList.contains('project01')) {
             project01.updateAutoHeight();
@@ -305,6 +306,31 @@ infoViewEls.forEach(function (infoView) {
         }
     });
 });
+
+
+// Contact / What My Team Says!
+new Swiper('#contact .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+        el: '#contact .swiper .swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesOffsetAfter: 0
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesOffsetAfter: 0
+        }
+    }
+});
+
 
 
 // Footer this-year
